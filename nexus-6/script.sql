@@ -9,6 +9,39 @@ CREATE TABLE posts
   PRIMARY KEY     (id)
 );
 
+CREATE TABLE users
+(
+  id              smallint unsigned NOT NULL auto_increment,
+  username        varchar(15) NOT NULL,
+  pass            varchar(10) NOT NULL,
+  usertype        varchar(15) NOT NULL,
+
+  PRIMARY KEY     (id)
+);
+
+INSERT INTO users
+( username, pass, usertype ) 
+VALUES 
+(
+  'usuario1',
+  'password1',
+  'administ'
+);
+
+INSERT INTO posts
+( title, excerpt, content, published_on )
+VALUES
+(
+  'Herramientas útiles para desarrolladores (IV): Confluence',
+  'Confluence es un software utilizado para la colaboración en equipo.',
+  'Confluence es un software utilizado para la colaboración en equipo. Es un lugar 
+  fantástico para poner en común ideas, requisitos en los que el equipo de producto 
+  está trabajando y documentación para construirlo mejor. Es genial porque es muy 
+  fácil de utilizar y todos pueden contribuir.',
+  '2020-05-29 15:28:59'
+);
+
+
 INSERT INTO posts
 ( title, excerpt, content, published_on )
 VALUES
