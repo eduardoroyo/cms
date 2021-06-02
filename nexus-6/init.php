@@ -15,6 +15,7 @@ require( 'inc/class-db.php' );
 require( 'inc/posts.php' );
 require( 'inc/helpers.php' );
 
+//Instancia de la clase class-db.php
 $app_db = new DB( DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE, DB_PORT );
 
 if ( isset( $_GET['logout'] ) ) {
