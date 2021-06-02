@@ -3,10 +3,11 @@
 /**
  * Devuelve todo el listado de posts
  */
-function get_all_posts() {
+function get_all_posts()
+{
 	global $app_db;
-	$result = $app_db->query( "SELECT * FROM posts" );
-	return $app_db->fetch_all( $result );
+	$result = $app_db->query("SELECT * FROM posts ORDER BY published_on DESC");
+	return $app_db->fetch_all($result);
 }
 
 /**
@@ -16,35 +17,37 @@ function get_all_posts() {
  * @param $excerpt
  * @param $content
  */
-function insert_post( $title, $excerpt, $content ) {
+function insert_post($title, $excerpt, $content)
+{
 	global $app_db;
 
-	$published_on = date( 'Y-m-d H:i:s' );
+	$published_on = date('Y-m-d H:i:s');
 
-	$title = $app_db->real_escape_string( $title );
-	$excerpt = $app_db->real_escape_string( $excerpt );
-	$content = $app_db->real_escape_string( $content );
+	$title = $app_db->real_escape_string($title);
+	$excerpt = $app_db->real_escape_string($excerpt);
+	$content = $app_db->real_escape_string($content);
 
 	$query = "INSERT INTO posts
 	( title, excerpt, content, published_on )
 	VALUES ( '$title', '$excerpt', '$content', '$published_on' )";
 
-	$result = $app_db->query( $query );
+	$result = $app_db->query($query);
 }
 
 /**
  * Busca y devuelve un sólo post
  * Si no lo encuentra, devuelve false
  */
-function get_post( $post_id ) {
+function get_post($post_id)
+{
 	global $app_db;
 
-	$post_id = intval( $post_id );
+	$post_id = intval($post_id);
 
 	$query = "SELECT * FROM posts WHERE id = " . $post_id;
-	$result = $app_db->query( $query );
+	$result = $app_db->query($query);
 
-	return $app_db->fetch_assoc( $result );
+	return $app_db->fetch_assoc($result);
 }
 
 /**
@@ -52,8 +55,9 @@ function get_post( $post_id ) {
  *
  * @param $id
  */
-function delete_post( $id ) {
+function delete_post($id)
+{
 	global $app_db;
 
-	$result = $app_db->query( "DELETE FROM posts WHERE id = $id" );
+	$result = $app_db->query("DELETE FROM posts WHERE id = $id");
 }
