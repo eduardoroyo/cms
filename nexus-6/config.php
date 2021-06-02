@@ -4,7 +4,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-define('SITE_URL', 'http://localhost:8888/cms/04-clases-y-objetos/02-final');
+define('SITE_URL', 'http://localhost:8888/cms/nexus-6');
 define('SITE_TIMEZONE', 'Australia/Sydney');
 define('SITE_LANG', ['es', 'spa', 'es_ES']);
 
