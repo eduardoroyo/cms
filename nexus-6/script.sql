@@ -20,6 +20,14 @@ CREATE TABLE users
   PRIMARY KEY     (id)
 );
 
+CREATE TABLE categories
+(
+  cat_id          smallint unsigned NOT NULL auto_increment,
+  cat_name        varchar(20) NOT NULL,
+
+  PRIMARY KEY     (cat_id)
+);
+
 INSERT INTO users
 ( username, pass, usertype ) 
 VALUES 
@@ -27,6 +35,34 @@ VALUES
   'usuario1',
   'password1',
   'administ'
+);
+
+INSERT INTO categories
+( cat_name ) 
+VALUES 
+(
+  'herramientas'
+);
+
+INSERT INTO categories
+( cat_name ) 
+VALUES 
+(
+  'programación'
+);
+
+INSERT INTO categories
+( cat_name ) 
+VALUES 
+(
+  'comandos'
+);
+
+INSERT INTO categories
+( cat_name ) 
+VALUES 
+(
+  'sistemas operativos'
 );
 
 INSERT INTO posts
