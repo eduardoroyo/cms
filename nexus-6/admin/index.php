@@ -30,6 +30,7 @@ switch ( $action ) {
 		$title = '';
 		$excerpt = '';
 		$content = '';
+		$category = '';
 
 		if ( isset( $_POST['submit-new-post'] ) ) {
 
@@ -37,12 +38,13 @@ switch ( $action ) {
 			$title = filter_input( INPUT_POST, 'title', FILTER_SANITIZE_STRING );
 			$excerpt = filter_input( INPUT_POST, 'excerpt', FILTER_SANITIZE_STRING );
 			$content = strip_tags( $_POST['content'], '<br><p><a><img><div>' );
+			$category = filter_input( INPUT_POST, 'category', FILTER_SANITIZE_STRING );
 
 			if ( empty( $title ) || empty( $content ) ) {
 				$error = true;
 			}
 			else {
-				insert_post( $title, $excerpt, $content );
+				insert_post( $title, $excerpt, $content , $category);
 				// Redirigir al blog
 				redirect_to( 'admin?action=list-posts&success=true' );
 			}

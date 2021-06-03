@@ -31,6 +31,10 @@ if ( isset( $_GET['view'] ) ) {
 				</div>
 				<footer>
 					<span class="post-date">
+						Categoría:
+						<?php echo $post['category']; ?>
+					</span></br>
+					<span class="post-date">
 						Publicada en:
 						<?php	echo strftime( '%d %b %Y', strtotime( $post['published_on'] ) );	?>
 					</span>

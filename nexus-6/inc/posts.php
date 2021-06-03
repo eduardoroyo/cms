@@ -16,8 +16,9 @@ function get_all_posts()
  * @param $title
  * @param $excerpt
  * @param $content
+ * @param $category
  */
-function insert_post($title, $excerpt, $content)
+function insert_post($title, $excerpt, $content, $category)
 {
 	global $app_db;
 
@@ -26,10 +27,11 @@ function insert_post($title, $excerpt, $content)
 	$title = $app_db->real_escape_string($title);
 	$excerpt = $app_db->real_escape_string($excerpt);
 	$content = $app_db->real_escape_string($content);
+	$category = $app_db->real_escape_string($category);
 
 	$query = "INSERT INTO posts
-	( title, excerpt, content, published_on )
-	VALUES ( '$title', '$excerpt', '$content', '$published_on' )";
+	( title, excerpt, content, category, published_on )
+	VALUES ( '$title', '$excerpt', '$content', '$category', '$published_on' )";
 
 	$result = $app_db->query($query);
 }

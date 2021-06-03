@@ -11,7 +11,8 @@
 		<tr>
 			<td><?php echo $post['title']; ?></td>
 			<td><?php echo $post['published_on']; ?></td>
-			<td><a href="<?php echo SITE_URL . '/admin?action=list-posts&delete-post=' . $post['id'] ?>&hash=<?php echo generate_hash('delete-post-' . $post['id']); ?>">Delete</a></td>
+			<td><?php echo $post['category']; ?></td>
+			<td><a href="<?php echo SITE_URL . '/admin?action=list-posts&delete-post=' . $post['id'] ?>&hash=<?php echo generate_hash('delete-post-' . $post['id']); ?>">Eliminar</a></td>
 		</tr>
 	<?php endforeach; ?>
 </table>

@@ -4,6 +4,7 @@ CREATE TABLE posts
   title           varchar(255) NOT NULL,
   excerpt         text NOT NULL,
   content         text NOT NULL,
+  category        text,
   published_on    datetime NOT NULL,
 
   PRIMARY KEY     (id)
@@ -29,7 +30,7 @@ VALUES
 );
 
 INSERT INTO posts
-( title, excerpt, content, published_on )
+( title, excerpt, content, category, published_on )
 VALUES
 (
   'Herramientas útiles para desarrolladores (IV): Confluence',
@@ -38,25 +39,12 @@ VALUES
   fantástico para poner en común ideas, requisitos en los que el equipo de producto 
   está trabajando y documentación para construirlo mejor. Es genial porque es muy 
   fácil de utilizar y todos pueden contribuir.',
-  '2020-05-29 15:28:59'
-);
-
-
-INSERT INTO posts
-( title, excerpt, content, published_on )
-VALUES
-(
-  'Herramientas útiles para desarrolladores (IV): Confluence',
-  'Confluence es un software utilizado para la colaboración en equipo.',
-  'Confluence es un software utilizado para la colaboración en equipo. Es un lugar 
-  fantástico para poner en común ideas, requisitos en los que el equipo de producto 
-  está trabajando y documentación para construirlo mejor. Es genial porque es muy 
-  fácil de utilizar y todos pueden contribuir.',
+  'herramientas',
   '2020-05-29 15:28:59'
 );
 
 INSERT INTO posts
-( title, excerpt, content, published_on )
+( title, excerpt, content, category, published_on )
 VALUES
 (
   'Sistemas Operativos (II): UNIX',
@@ -70,11 +58,12 @@ VALUES
   Sin embargo, Novell siempre argumentó que solo vendió los derechos de uso del software, 
   pero que retuvo el copyright sobre "UNIX®". En 2010, y tras una larga batalla legal, 
   esta ha pasado nuevamente a ser propiedad de Novell.',
+  'sistemas operativos',
   '2021-04-10 11:10:11'
 );
 
 INSERT INTO posts
-( title, excerpt, content, published_on )
+( title, excerpt, content, category, published_on )
 VALUES
 (
   'Herramientas útiles para desarrolladores (III): Sublime Text',
@@ -85,11 +74,12 @@ VALUES
   la opción de selección múltiple. No tienes que navegar por los menús, solo 
   tienes que buscar lo que necesitas. También puedes cambiar de proyecto con 
   facilidad. ¡Funciona muy bien!',
+  'herramientas',
   '2021-03-11 06:45:56'
 );
 
 INSERT INTO posts
-( title, excerpt, content, published_on )
+( title, excerpt, content, category, published_on )
 VALUES
 (
   'Herramientas útiles para desarrolladores (II): Docker',
@@ -101,11 +91,12 @@ VALUES
   para construir, enviar y utilizar aplicaciones distribuidas. Lo que hace Docker 
   es proporcionar una plataforma de ejecución de contenedores de software que te 
   permite contener tu software en un sistema de archivos.',
+  'herramientas',
   '2020-10-12 12:12:12'
 );
 
 INSERT INTO posts
-( title, excerpt, content, published_on )
+( title, excerpt, content, category, published_on )
 VALUES
 (
   'Comandos de Linux (II): pwd',
@@ -115,11 +106,12 @@ VALUES
   en el que te encuentras. El comando devolverá una ruta absoluta (completa), que es básicamente 
   una ruta de todos los directorios que comienzan con una barra diagonal (/) Un ejemplo de 
   una ruta absoluta es /home/nombredeusuario.',
+  'comandos',
   '2020-09-26 20:23:10'
 );
 
 INSERT INTO posts
-( title, excerpt, content, published_on )
+( title, excerpt, content, category, published_on )
 VALUES
 (
   'Sistemas Operativos (I): Mac OS',
@@ -130,11 +122,12 @@ VALUES
   por primera vez en System 7.5.1. Es conocido por haber sido uno de los primeros sistemas 
   dirigidos al gran público en contar con una interfaz gráfica compuesta por la interacción 
   del mouse con ventanas, iconos y menús.',
+  'sistemas operativos',
   '2020-08-30 21:15:18'
 );
 
 INSERT INTO posts
-( title, excerpt, content, published_on )
+( title, excerpt, content, category, published_on )
 VALUES
 (
   'Lenguajes de programación (III): Python',
@@ -144,11 +137,12 @@ VALUES
   la legibilidad de su código. Se trata de un lenguaje de programación multiparadigma, 
   ya que soporta parcialmente la orientación a objetos, programación imperativa y, en menor 
   medida, programación funcional. Es un lenguaje interpretado, dinámico y multiplataforma.',
+  'programación',
   '2020-05-17 03:42:32'
 );
 
 INSERT INTO posts
-( title, excerpt, content, published_on )
+( title, excerpt, content, category, published_on )
 VALUES
 (
   'Herramientas útiles para desarrolladores (I): Git',
@@ -158,11 +152,12 @@ VALUES
   aplicaciones cuando estas tienen un gran número de archivos de código fuente. Su propósito 
   es llevar registro de los cambios en archivos de computadora incluyendo coordinar el 
   trabajo que varias personas realizan sobre archivos compartidos en un repositorio de código.',
+  'herramientas',
   '2020-04-03 10:55:12'
 );
 
 INSERT INTO posts
-( title, excerpt, content, published_on )
+( title, excerpt, content, category, published_on )
 VALUES
 (
   'Comandos de Linux (I): cd',
@@ -172,11 +167,12 @@ VALUES
   te encuentres. Supongamos que estás en /home/nombredeusuario/Documentos y deseas ir a Fotos, 
   un subdirectorio de Documentos. Para hacerlo, simplemente escribe el siguiente comando: 
   cd Fotos.',
+  'comandos',
   '2020-03-20 18:56:13'
 );
 
 INSERT INTO posts
-( title, excerpt, content, published_on )
+( title, excerpt, content, category, published_on )
 VALUES
 (
   'Lenguajes de Programación (II): C',
@@ -188,11 +184,12 @@ VALUES
   a la implementación de sistemas operativos, concretamente Unix. C es apreciado por la 
   eficiencia del código que produce y es el lenguaje de programación más popular para crear 
   softwares de sistemas y aplicaciones.',
+  'programación',
   '2020-02-13 20:22:43'
 );
 
 INSERT INTO posts
-( title, excerpt, content, published_on )
+( title, excerpt, content, category, published_on )
 VALUES
 (
   'Lenguajes de Programación (I): Java',
@@ -207,5 +204,6 @@ VALUES
   Java es, a partir de 2012, uno de los 
   lenguajes de programación más populares en uso, particularmente para aplicaciones de cliente-servidor 
   de web, con unos diez millones de usuarios reportados.',
+  'programación',
   '2020-01-26 10:15:00'
 );

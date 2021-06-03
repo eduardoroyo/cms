@@ -17,6 +17,9 @@
 	<label for="content">Contenido (Requerido)</label>
 	<textarea name="content" id="content" cols="30" rows="30"><?php echo htmlspecialchars( $content, ENT_QUOTES ); ?></textarea>
 
+	<label for="category">Categoría</label>
+	<input type="text" name="category" id="category" value="<?php echo htmlspecialchars( $excerpt, ENT_QUOTES ); ?>">
+
 	<p>
 		<input type="submit" name="submit-new-post" value="Nuevo post">
 	</p>
