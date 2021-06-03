@@ -10,6 +10,17 @@ CREATE TABLE posts
   PRIMARY KEY     (id)
 );
 
+CREATE TABLE comments
+(
+  id              smallint unsigned NOT NULL auto_increment,
+  post_id         smallint unsigned NOT NULL,
+  content         text NOT NULL,
+  published_on    datetime NOT NULL,
+
+  PRIMARY KEY     (id),
+  FOREIGN KEY     (post_id) references posts(id)
+);
+
 CREATE TABLE categories
 (
   cat_id          smallint unsigned NOT NULL auto_increment,
@@ -18,13 +29,12 @@ CREATE TABLE categories
   PRIMARY KEY     (cat_id)
 );
 
-INSERT INTO users
-( username, pass, usertype ) 
-VALUES 
-(
-  'usuario1',
-  'password1',
-  'administ'
+INSERT INTO comments
+( content, post_id, published_on )
+VALUES(
+  'Hola',
+  '1',
+  '2020-01-26 10:15:00'
 );
 
 INSERT INTO categories
@@ -149,6 +159,7 @@ VALUES
   programación funcional. Es un lenguaje interpretado, dinámico y multiplataforma.
   Es administrado por la Python Software Foundation. Posee una licencia de código abierto, 
   denominada Python Software Foundation License.',
+  'programación',
   '2020-06-12 15:28:59'
 );
 
