@@ -10,20 +10,10 @@ CREATE TABLE posts
   PRIMARY KEY     (id)
 );
 
-CREATE TABLE users
-(
-  id              smallint unsigned NOT NULL auto_increment,
-  username        varchar(15) NOT NULL,
-  pass            varchar(10) NOT NULL,
-  usertype        varchar(15) NOT NULL,
-
-  PRIMARY KEY     (id)
-);
-
 CREATE TABLE categories
 (
   cat_id          smallint unsigned NOT NULL auto_increment,
-  cat_name        varchar(20) NOT NULL,
+  cat_name        varchar(30) NOT NULL,
 
   PRIMARY KEY     (cat_id)
 );
@@ -144,6 +134,22 @@ VALUES
   fácil de utilizar y todos pueden contribuir.',
   'herramientas',
   '2020-05-29 15:28:59'
+);
+
+INSERT INTO posts
+( title, excerpt, content, category, published_on )
+VALUES
+(
+  'Lenguajes de programación (III): Python',
+  'Python es un lenguaje de programación interpretado cuya filosofía hace hincapié en la 
+  legibilidad de su código.',
+  'Python es un lenguaje de programación interpretado cuya filosofía hace hincapié en la 
+  legibilidad de su código. Se trata de un lenguaje de programación multiparadigma, ya que 
+  soporta parcialmente la orientación a objetos, programación imperativa y, en menor medida, 
+  programación funcional. Es un lenguaje interpretado, dinámico y multiplataforma.
+  Es administrado por la Python Software Foundation. Posee una licencia de código abierto, 
+  denominada Python Software Foundation License.',
+  '2020-06-12 15:28:59'
 );
 
 INSERT INTO posts
