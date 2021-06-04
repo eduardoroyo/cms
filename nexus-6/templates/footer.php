@@ -2,7 +2,7 @@
 
 <footer id="footer">
 	<div id="inner-footer">
-		Nexus 6. Tu enciclopedia de informática y programación.
+		<b>Nexus 6</b>. Tu enciclopedia de informática y programación.
 	</div>
 </footer>
 </body>

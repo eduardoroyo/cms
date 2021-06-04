@@ -1,4 +1,4 @@
-CREATE TABLE posts
+CREATE TABLE IF NOT EXISTS posts
 (
   id              smallint unsigned NOT NULL auto_increment,
   title           varchar(255) NOT NULL,
@@ -27,42 +27,6 @@ CREATE TABLE categories
   cat_name        varchar(30) NOT NULL,
 
   PRIMARY KEY     (cat_id)
-);
-
-INSERT INTO comments
-( content, post_id, published_on )
-VALUES(
-  'Hola',
-  '1',
-  '2020-01-26 10:15:00'
-);
-
-INSERT INTO categories
-( cat_name ) 
-VALUES 
-(
-  'herramientas'
-);
-
-INSERT INTO categories
-( cat_name ) 
-VALUES 
-(
-  'programación'
-);
-
-INSERT INTO categories
-( cat_name ) 
-VALUES 
-(
-  'comandos'
-);
-
-INSERT INTO categories
-( cat_name ) 
-VALUES 
-(
-  'sistemas operativos'
 );
 
 INSERT INTO posts
