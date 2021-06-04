@@ -10,24 +10,29 @@ CREATE TABLE IF NOT EXISTS posts
   PRIMARY KEY     (id)
 );
 
+/*
 CREATE TABLE comments
 (
   id              smallint unsigned NOT NULL auto_increment,
   post_id         smallint unsigned NOT NULL,
-  content         text NOT NULL,
+  comment         text NOT NULL,
   published_on    datetime NOT NULL,
+  name            varchar(30) NOT NULL,
 
   PRIMARY KEY     (id),
-  FOREIGN KEY     (post_id) references posts(id)
+  FOREIGN KEY     (post_id) references posts(id),
+  FOREIGN KEY     (name) references users(username),
 );
 
-CREATE TABLE categories
+CREATE TABLE users
 (
-  cat_id          smallint unsigned NOT NULL auto_increment,
-  cat_name        varchar(30) NOT NULL,
+  id              smallint unsigned NOT NULL auto_increment,
+  username        varchar(30) NOT NULL,
+  password        varchar(30) NOT NULL,
 
-  PRIMARY KEY     (cat_id)
+  PRIMARY KEY     (id),
 );
+*/
 
 INSERT INTO posts
 ( title, excerpt, content, category, published_on )
