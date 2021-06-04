@@ -1,6 +1,6 @@
 # Nexus-6 🌀
 
-Made with PHP, HTML5, CSS3 and MySQL in VSCode + MAMP. I used Milligram for the basic CSS.
+<h2>Made with PHP, HTML5, CSS3 and MySQL in VSCode + MAMP. I used Milligram for the basic CSS.</h2>
 
 During installation, take care of writing the right route in 'config.php' file or it may not work properly. Just be sure 
 that the route is correct according to your file system. For more information you can contact me <a href= "mailto:eduardoroyodam@gmail.com">here</a>.
